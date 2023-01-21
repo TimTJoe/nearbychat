@@ -1,0 +1,49 @@
+.nav {
+    border-bottom: 1px solid #F2F2F2;
+    border-top: 1px solid #F2F2F2;
+    padding: 4px;
+}
+
+.link {
+    margin: 0;
+    padding: 0;
+    border-radius: 14px/14px;
+}
+
+.logo {
+    max-width: 44px;
+    padding: 0;
+    margin: 0 0 0 6px;
+    display: grid;
+    place-items: center;
+}
+
+.logo>.a {
+    padding: 0;
+    margin: 0;
+}
+
+a.active {
+    background-color: #F2F2F2;
+    font-weight: bolder;
+    border-radius: 12px/12px;
+}
+
+.flexlink {
+    color: black;
+    display: flex;
+    padding: 8px 0;
+    font-size: 1.2rem;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+a.flexlink {
+    color: black;
+}
+
+.flexicon {
+    width: 60px;
+}

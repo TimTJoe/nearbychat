@@ -1,0 +1,59 @@
+:root {
+    --amber: #ffc107;
+    --blue: #2196f3;
+    --blue-grey: #607d8b;
+    --brown: #795548;
+    --cyan: #00bcd4;
+    --deep-orange: #ff5722;
+    --deep-purple: #673ab7;
+    --green: #4caf50;
+    --grey: #9e9e9e;
+    --indigo: #3f51b5;
+    --light-blue: #03a9f4;
+    --light-green: #8bc34a;
+    --lime: #cddc39;
+    --orange: #ff9800;
+    --pink: #e91e63;
+    --purple: #9c27b0;
+    --red: #f44336;
+    --teal: #009688;
+    --yellow: #ffeb3b;
+    --primary: #6200ee;
+    --primary-dark: #3700b3;
+    --primary-light: #bb86fc;
+    --secondary: #03dac6;
+    --secondary-dark: #018786;
+    --secondary-light: #66fff8;
+    --danger: #b00020;
+    --danger-dark: #d32f2f;
+    --danger-light: #c51162;
+    --info: #714cfe;
+    --info-dark: #021aee;
+    --info-light: #d2c2fd;
+    --success: #61d800;
+    --success-dark: #41c300;
+    --success-light: #c6f68d;
+    --warning: #ff8d00;
+    --warning-dark: #ee6002;
+    --warning-light: #ffc77d;
+    --dark: #424242;
+    --dark-dark: #212121;
+    --dark-light: #757575;
+    --light: #f5f5f5;
+    --light-dark: #e0e0e0;
+    --light-light: #fafafa;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Roboto", system-ui, -apple-system, "Segoe UI",
+        "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-family-monospace: "Roboto Mono", "SFMono-Regular", "Menlo", "Monaco",
+        "Consolas", "Liberation Mono", "Courier New", monospace;
+    --font-family-material-icons: "Material Icons", "Material Icons Outlined",
+        "Material Icons Two Tone", "Material Icons Round",
+        "Material Icons Sharp";
+}

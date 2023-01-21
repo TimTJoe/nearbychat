@@ -1,0 +1,31 @@
+[
+	{
+		"sender": "Calvin Glee",
+		"recipent": "Mardea Adams",
+		"avatar": "avatar",
+		"message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum et neque velit, sequi voluptatum veniam ratione",
+		"token": "12345678"
+	},
+	{
+		"sender": "Emily Adams",
+		"recipent": "Mardea Adams",
+		"avatar": "avatar",
+		"message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum et neque velit, sequi voluptatum veniam ratione",
+		"token": "12345678"
+	},
+	{
+		"sender": "Benetta Barclay",
+		"recipent": "Mardea Adams",
+		"avatar": "avatar",
+		"message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum et neque velit,sequi voluptatum veniam ratione",
+		"token": "12345678"
+	},
+	{
+		"sender": "Jeremiah Tommy Alison",
+		"recipent": "Mardea Adams",
+		"avatar": "avatar",
+		"message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum et neque velit, sequi voluptatum veniam ratione",
+		"token": "12345678"
+	}
+
+]

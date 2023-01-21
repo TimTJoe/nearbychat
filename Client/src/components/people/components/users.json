@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Timothy",
+    "uuid": "123khdio45klslk",
+    "location": "12 Street, Sinkor, Near Boulevard Palace",
+    "picture": "picurl"
+  },
+  {
+    "name": "Emmanuel Solum",
+    "uuid": "123islkdihdlas",
+    "location": "14 Street, Sinkor, Barclay Avenue",
+    "picture": "picurl"
+  },
+  {
+    "name": "John Doe",
+    "uuid": "lakialkdaolsk",
+    "location": "East Fiamah, Sinkor",
+    "picture": "picurl"
+  },
+  {
+    "name": "Jane John",
+    "uuid": "lklakdhllkdl",
+    "location": "Raymond Feild, Sinkor",
+    "picture": "picurl"
+  },
+  {
+    "name": "Konah Doe",
+    "uuid": "lkdadjalkdjl",
+    "location": "Fara Community, 21 Street, Sinkor",
+    "picture": "picurl"
+  }
+]
