@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "cd .. && cd Server && npm run dev",
+    "concurrently": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -14,7 +16,9 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.2",
     "axios": "^1.2.2",
+    "concurrently": "^7.6.0",
     "countdown": "^2.6.0",
+    "dotenv": "^16.0.3",
     "peerjs": "^1.4.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

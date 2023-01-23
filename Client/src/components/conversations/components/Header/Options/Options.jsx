@@ -62,12 +62,6 @@ export default function AccountMenu() {
 
         <MenuItem>
           <ListItemIcon sx={{ mr: 1, color: "black" }}>
-            <ArchiveIcon />
-          </ListItemIcon> Archive
-        </MenuItem>
-
-        <MenuItem>
-          <ListItemIcon sx={{ mr: 1, color: "black" }}>
             <InfoIcon />
           </ListItemIcon> Details
         </MenuItem>
