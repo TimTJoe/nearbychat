@@ -149,7 +149,7 @@ function Login() {
             <Header />
             <Paper>
                 <Title variant='h5'> Log in</Title>
-                <Subtitle variant='subtitle1'> Shoot your short.</Subtitle>
+                <Subtitle variant='subtitle1'> Message nearby people</Subtitle>
                 <InputWrap>
 
                     <InputField
@@ -190,7 +190,9 @@ function Login() {
                         }}
                     />
                 </InputWrap>
-                <Paragraph variant='body1'>You will be able to send short messages to people within 120km of your current location. Conversation disappear within 24 hours.</Paragraph>
+                <Paragraph variant='body1'>
+                    <Link to={"/sign?find-account"}>Forget password?</Link>
+                </Paragraph>
                 <ButtonBox>
                     <PrimaryButton
                         variant="contained"
@@ -200,7 +202,7 @@ function Login() {
                         disableElevation >Login</PrimaryButton>
                 </ButtonBox>
                 <Footer>
-                    <Paragraph variant='body1'>Already have an account? <Link to={"/login"}>Login</Link></Paragraph>
+                    <Paragraph variant='body1'> Don't have an account? <Link to={"/signup"}>Create new account</Link></Paragraph>
                 </Footer>
             </Paper>
         </Form
