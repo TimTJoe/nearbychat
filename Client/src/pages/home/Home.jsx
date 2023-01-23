@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Grid from "@mui/material/Grid"
 import setTitle from "@helpers/setTitle"
 import Messages from "@components/messages"
@@ -7,6 +7,9 @@ import People from "@components/people"
 import { useParams } from "react-router-dom";
 
 function Home(props) {
+	const [isLogin, setIsLogin] = useState(false)
+	const handleLogin = () => { !isLogin }
+	
 	const { id } = useParams()
 	//Set page title
 	setTitle(" Home - Message People Nearby")

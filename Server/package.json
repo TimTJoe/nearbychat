@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "start http://localhost:8031/ && nodemon app.js"
+    "dev": "start http://localhost:8031/ && nodemon app.js "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "geolocator": "^2.1.5",
     "nodemon": "^2.0.20",

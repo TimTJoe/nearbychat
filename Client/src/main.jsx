@@ -10,6 +10,7 @@ import {
 //PAGES
 import Home from "@pages/home"
 import Call from '@pages/call'
+import Login from '@pages/login'
 //COMPONENTS
 import Navigation from "@components/Navigation"
 import Message from "@components/messages"
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='chat/:ChatID' element={<Home />} />
       </Route>
       <Route path='call/:CallerID' element={<Call />} />
+      <Route path="login" element={<Login />} />
     </Routes>
     {/* </Fragment> */}
     {/* <Media
