@@ -11,6 +11,7 @@ import {
 import Home from "@pages/home"
 import Call from '@pages/call'
 import Login from '@pages/login'
+import Signup from '@src/pages/signup';
 //COMPONENTS
 import Navigation from "@components/Navigation"
 import Message from "@components/messages"
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Route>
       <Route path='call/:CallerID' element={<Call />} />
       <Route path="login" element={<Login />} />
+      <Route path="signup" element={<Signup />} />
     </Routes>
     {/* </Fragment> */}
     {/* <Media

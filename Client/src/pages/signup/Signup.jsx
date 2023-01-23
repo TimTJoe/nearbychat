@@ -74,7 +74,7 @@ const Footer = styled.div`
     margin-top: 8%;
 `
 
-function Login() {
+function Signup() {
     const [values, setValues] = useState({
         showPassword: false,
     });
@@ -148,7 +148,7 @@ function Login() {
         >
             <Header />
             <Paper>
-                <Title variant='h5'> Log in</Title>
+                <Title variant='h5'> Create a new account</Title>
                 <Subtitle variant='subtitle1'> Shoot your short.</Subtitle>
                 <InputWrap>
 
@@ -194,10 +194,10 @@ function Login() {
                 <ButtonBox>
                     <PrimaryButton
                         variant="contained"
-                        color="primary"
+                        color="success"
                         size="large"
                         type="submit"
-                        disableElevation >Login</PrimaryButton>
+                        disableElevation >Sign up</PrimaryButton>
                 </ButtonBox>
                 <Footer>
                     <Paragraph variant='body1'>Already have an account? <Link to={"/login"}>Login</Link></Paragraph>
@@ -209,4 +209,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Signup
