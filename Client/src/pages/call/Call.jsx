@@ -31,7 +31,7 @@ const Textbox = styled.section`
 `
 
 const Name = styled.p`
-    font-size: 1.65rem;
+    font-size: 1.30rem;
     margin: 0;
 `
 const Location = styled.p`
@@ -44,7 +44,7 @@ const Flexrow = styled.section`
     align-content: center;
     flex-wrap: wrap;
     max-width: 280px;
-    margin-bottom: 24px
+    margin-bottom: 24px;
 `
 
 function Call() {

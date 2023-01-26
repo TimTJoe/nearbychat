@@ -7,8 +7,8 @@ import VerifiedRounded from "@mui/icons-material/VerifiedRounded"
 import { styled } from '@mui/material/styles'
 
 const BigAvatar = styled(Avatar)(({ }) => ({
-    width: 168,
-    height: 168
+    width: 100,
+    height: 100
 }))
 
 

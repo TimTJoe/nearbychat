@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import styled from "styled-components"
-import Header from './components/Header'
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import { grey } from '@mui/material/colors'
-import { Link } from 'react-router-dom'
-import InputField from '@src/components/Textfields';
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
 import Visibility from "@mui/icons-material/Visibility";
@@ -13,70 +7,39 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import axios from "axios"
 import { useForm } from "react-hook-form"
 import Box from '@mui/material/Box';
-import PrimaryButton from '@src/components/Buttons';
+
+import TextField from '../components/TextField';
+import Fieldbox from '../components/Fieldbox';
+import Button from '../components/Button';
+import Paper from '../components/Paper';
+import Textbox from '../components/Textbox';
+import Link from '../components/Link';
+import Header from '../components/Header';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 // import dotenv from "dotenv"
 // dotenv.config()
 // const BACKEND_URL = process.env.BACKEND_URL;
 
-const Form
-
-    = styled(Box)`
+const Form = styled(Box)`
     min-height: 93vh;
     background-color: white;
-`
-const Paper = styled.section`
-    margin: 0 auto;
-    border-radius: 12px;
-    border: thin solid ${grey[100]};
-    margin-top: 24px;
-    min-height: 70vh;
-    max-width: 450px;
-    padding: 12px;
-    /* box-shadow: 13px 14px 7px -15px rgba(0,0,0,0.1); */
-    text-align: center
-`
-const Title = styled(Typography)`
-    && {
-        font-weight: 800;
-        
-    }
-`
-const Subtitle = styled(Typography)`
-    &&{
-        font-size: 1.1rem;
-        font-weight: 300;
-        margin-bottom: 1.5rem
-    }
-`
-const InputWrap = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 12px;
-    padding-bottom:24px ;
-`
-const Paragraph = styled(Typography)`
-    && {
-        font-size: .9rem;
-        line-height: normal;
-        max-width: 90%;
-        margin: 0 auto;
-        color: ${grey[600]}
-    }
 `
 
 const ButtonBox = styled.div`
     text-align: right;
-    padding: 17px 0 24px 0;
+        margin: 2vh 5vh 0 0;
+
 `
-const Footer = styled.div`
+/* const Footer = styled.div`
     margin-top: 8%;
-`
+` */
 
 function Signup() {
     const [values, setValues] = useState({
         showPassword: false,
+        isPasswordConfirmed: false
     });
 
     const handleClickShowPassword = () => {
@@ -85,6 +48,7 @@ function Signup() {
             showPassword: !values.showPassword,
         });
     };
+
 
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
@@ -146,13 +110,16 @@ function Signup() {
             component={"form"}
             method="post"
         >
-            <Header />
-            <Paper>
-                <Title variant='h5'> Create a new account</Title>
-                <Subtitle variant='subtitle1'> Shoot your short.</Subtitle>
-                <InputWrap>
+            <Navigation />
 
-                    <InputField
+            <Paper>
+                <Header
+                    title="Create new account"
+                    tagline="Shoot your short." />
+
+                <Fieldbox>
+
+                    <TextField
                         label="Email"
                         name="email"
                         type={"text"}
@@ -162,7 +129,7 @@ function Signup() {
                         InputLabelProps={{ shrink: true }}
                         fullWidth
                     />
-                    <InputField
+                    <TextField
                         label="Password"
                         name="password"
                         {...register("password", FieldOptions.password)}
@@ -175,10 +142,6 @@ function Signup() {
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <IconButton
-                                        sx={{
-                                            marginRight: ".001em "
-                                        }}
-                                        aria-label="toggle password visibility"
                                         onClick={handleClickShowPassword}
                                         onMouseDown={handleMouseDownPassword}
                                         edge="end"
@@ -189,18 +152,23 @@ function Signup() {
                             ),
                         }}
                     />
-                </InputWrap>
-                <Paragraph variant='body1'>You will be able to send short messages to people within 120km of your current location. Conversation disappear within 24 hours.</Paragraph>
+                </Fieldbox>
+                <Textbox align="center">
+                    You will be able to send short messages to people within 120km of your current location. Conversation disappear within 24 hours.
+
+                </Textbox>
+
                 <ButtonBox>
-                    <PrimaryButton
+                    <Button
                         variant="contained"
                         color="success"
                         size="large"
                         type="submit"
-                        disableElevation >Sign up</PrimaryButton>
+                        disableElevation >Sign up</Button>
                 </ButtonBox>
                 <Footer>
-                    <Paragraph variant='body1'>Already have an account? <Link to={"/login"}>Login</Link></Paragraph>
+                    <Textbox align="center"> Already have an account?
+                        <Link href='/login'>Log in</Link></Textbox>
                 </Footer>
             </Paper>
         </Form
