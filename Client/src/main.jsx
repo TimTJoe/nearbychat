@@ -10,8 +10,8 @@ import {
 //PAGES
 import Home from "@src/pages/home"
 import Call from '@src/pages/call'
-import Login from '@src/pages/login'
-import Signup from '@src/pages/signup';
+import Login from '@src/pages/account/login'
+import Signup from '@src/pages/account/signup';
 //COMPONENTS
 import Navigation from "@components/Navigation"
 import Message from "@components/messages"
