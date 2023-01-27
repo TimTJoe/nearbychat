@@ -16,6 +16,7 @@ import Signup from '@src/pages/account/signup';
 import Navigation from "@components/Navigation"
 import Message from "@components/messages"
 import People from "@components/people"
+import Profile from '@pages/account/profile';
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/" element={<Home />}>
         <Route path='chat/:ChatID' element={<Home />} />
       </Route>
+      <Route path='user/:username' element={<Profile />} />
       <Route path='call/:CallerID' element={<Call />} />
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />

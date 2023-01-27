@@ -7,6 +7,7 @@ import IconButton from "@components/IconButtons"
 import SettingsRounded from "@mui/icons-material/SettingsRounded";
 import RoomRounded from "@mui/icons-material/RoomRounded";
 import Avatar from '@mui/material/Avatar';
+import { Link } from "react-router-dom"
 
 const Wrapper = styled(Box)(({ theme }) => ({
 	borderBottom: "thin solid #D9D9D9",
@@ -51,9 +52,9 @@ function Header() {
 						<RoomRounded />
 					</IconButton>
 				</Tooltip>
-				<Tooltip title="Account Setting" arrow>
-					<CustomAvatar src='' alt='Calvin Glee' sizes='small' onClick={handleCall} />
-				</Tooltip>
+				<Link to="user">
+					<CustomAvatar src='' alt='Calvin Glee' />
+				</Link>
 			</RightContainer>
 		</Wrapper>
 	)
