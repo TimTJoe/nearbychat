@@ -6,6 +6,7 @@ import Tooltip from '@mui/material/Tooltip';
 import IconButton from "@components/IconButtons"
 import SettingsRounded from "@mui/icons-material/SettingsRounded";
 import RoomRounded from "@mui/icons-material/RoomRounded";
+import Avatar from '@mui/material/Avatar';
 
 const Wrapper = styled(Box)(({ theme }) => ({
 	borderBottom: "thin solid #D9D9D9",
@@ -29,6 +30,11 @@ const RightContainer = styled(Box)(({ theme }) => ({
 	paddingRight: 4,
 }))
 
+const CustomAvatar = styled(Avatar)(({ theme }) => ({
+	width: 37,
+	height: 37
+}))
+
 
 function Header() {
 	const handleCall = () => {
@@ -46,9 +52,7 @@ function Header() {
 					</IconButton>
 				</Tooltip>
 				<Tooltip title="Account Setting" arrow>
-					<IconButton sx={{ color: "black" }} onClick={handleCall}>
-						<SettingsRounded />
-					</IconButton>
+					<CustomAvatar src='' alt='Calvin Glee' sizes='small' onClick={handleCall} />
 				</Tooltip>
 			</RightContainer>
 		</Wrapper>
