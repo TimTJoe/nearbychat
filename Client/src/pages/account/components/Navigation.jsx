@@ -9,7 +9,7 @@ const Nav = styled.nav`
 `
 
 const Image = styled.img`
-    width: 100px;
+    width: 35px;
 `
 
 function Navigation() {
