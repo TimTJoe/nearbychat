@@ -52,7 +52,7 @@ function Header() {
 						<RoomRounded />
 					</IconButton>
 				</Tooltip>
-				<Link to="user">
+				<Link to="user/calvin">
 					<CustomAvatar src='' alt='Calvin Glee' />
 				</Link>
 			</RightContainer>
