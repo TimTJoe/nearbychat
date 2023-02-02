@@ -10,7 +10,7 @@ function Phone(props) {
 	const navigate = useNavigate()
 	const { ChatID } = useContext(ChatContext)
 	return (
-		<Tooltip title="Audio Call" arrow>
+		<Tooltip title="Start an audio call" arrow>
 			<IconButton
 				sx={{ color: "black" }}
 				onClick={() => navigate(`/call/${ChatID}`)}>

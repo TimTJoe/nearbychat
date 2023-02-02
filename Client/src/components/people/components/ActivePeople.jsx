@@ -136,14 +136,12 @@ function ActivePeople(props) {
 							</Picture>
 							<Inner>
 								<Name>{user.name}</Name>
-								<Tooltip title={`${user.name} current location`} arrow>
-									<Location>
-										<Icon>
-											<PersonPinCircleRounded />
-										</Icon>
-										{user.location}
-									</Location>
-								</Tooltip>
+								<Location>
+									<Icon>
+										<PersonPinCircleRounded />
+									</Icon>
+									{user.location}
+								</Location>
 							</Inner>
 						</Card>
 					))

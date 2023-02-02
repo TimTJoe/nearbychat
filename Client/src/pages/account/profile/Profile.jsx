@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import Navigation from '../components/Navigation';
 import Avatar from "@mui/material/Avatar"
 import Container from '@mui/material/Container';
@@ -9,6 +9,7 @@ import PhoneRounded from "@mui/icons-material/PhoneRounded"
 import VideoCallRounded from "@mui/icons-material/VideoCallRounded"
 import EmailRounded from "@mui/icons-material/EmailRounded"
 import IconButton from '@src/components/IconButtons';
+import Redirect from "@src/components/Redirect"
 
 const Content = styled.div`
     width: 400px;
@@ -79,6 +80,8 @@ const Details = styled.span``
 
 function Profile() {
     const { username } = useParams()
+    const navigate = useNavigate();
+
     // alert(username)
     return (
         < >
@@ -92,10 +95,14 @@ function Profile() {
                 </AvatarContainer>
                 <Strong>{username}</Strong>
                 <ButtonGroup>
-                    <IconButton>
+                    <IconButton
+                        onClick={() => navigate(`/call/${username}`)}
+                    >
                         <PhoneRounded />
                     </IconButton>
-                    <IconButton>
+                    <IconButton
+                        onClick={() => navigate(`/video/${username}`)}
+                    >
                         <VideoCallRounded />
                     </IconButton>
                 </ButtonGroup>

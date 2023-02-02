@@ -20,11 +20,9 @@ const Button = styled(IconButton)(({ theme }) => ({
 }))
 function EndCall() {
     return (
-        <Tooltip title="End Call">
             <Button>
                 <CallEndRounded />
             </Button>
-        </Tooltip>
     )
 }
 

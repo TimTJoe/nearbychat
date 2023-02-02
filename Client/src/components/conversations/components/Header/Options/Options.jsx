@@ -2,20 +2,18 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Menu from '@mui/material/Menu';
 import ListItemIcon from '@mui/material/ListItemIcon';
-// import OptionsIcon from "@icons/options.svg"
-// import BinIcon from "@icons/bin.svg"
-// import ArchiveIcon from "@icons/archive.svg"
-// import InfoIcon from "@icons/info.svg"
 import BinIcon from "@mui/icons-material/DeleteRounded"
 import ArchiveIcon from "@mui/icons-material/Inventory2Rounded"
 import InfoIcon from "@mui/icons-material/InfoRounded"
 import IconButton from "@components/IconButtons"
 import MenuItem from "@components/MenuItem"
-import { Link } from "react-router-dom"
 import PaperProps from "./PaperProps"
 import MoreIcon from "@mui/icons-material/MoreVertRounded"
+import { Link, useNavigate } from "react-router-dom"
 
-export default function AccountMenu() {
+export default function Options(props) {
+  const navigate = useNavigate()
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -60,7 +58,7 @@ export default function AccountMenu() {
           </ListItemIcon> Delete Conversation
         </MenuItem>
 
-        <MenuItem>
+        <MenuItem onClick={() => navigate(`/user/${props.username}`)}>
           <ListItemIcon sx={{ mr: 1, color: "black" }}>
             <InfoIcon />
           </ListItemIcon> Details

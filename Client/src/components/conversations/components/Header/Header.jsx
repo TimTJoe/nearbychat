@@ -34,16 +34,22 @@ const RightContainer = styled(Box)(({ theme }) => ({
 
 function Header(props) {
 	const { ChatID } = useContext(ChatContext)
+	//TODO: use the chatID to get the user from the db
+	const USER = {
+		ID: ChatID,
+		name: "Calvin Glee"
+	}
+	
 	return (
 		<Wrapper >
 			<LeftContainer >
 				<Avatar src={""} alt="Calvin Glee" />
-				<Typography>{ChatID}</Typography>
+				<Typography>{USER.ID}</Typography>
 			</LeftContainer>
 			<RightContainer >
 				<Phone />
 				<Camera />
-				<Options />
+				<Options username={USER.name} />
 			</RightContainer>
 		</Wrapper>
 	)
