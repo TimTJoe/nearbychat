@@ -40,7 +40,6 @@ const Notice = styled.span`
     display: inline-block;
     font-size: .7rem;
     color: #A6A6A6;
-    margin: 0;//TODO: REMOVE
     margin-top: 7px;
     width: calc(400px - 109px);
     text-align: left;
