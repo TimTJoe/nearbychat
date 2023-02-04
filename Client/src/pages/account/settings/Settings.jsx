@@ -11,8 +11,8 @@ import Navigation from '../components/Navigation';
 import Media from './components/Media';
 import Avatar from './components/Avatar';
 import UserContext from '@src/contexts/user/UserDetails'
-import Modal from './modal'
-import SettingContext, { SettingContextProvider } from './SettingContext'
+import Modal from "./modal"
+import { SettingContextProvider } from './SettingContext'
 
 const Content = styled.div`
     width: 400px;
@@ -25,7 +25,7 @@ const Content = styled.div`
 function Settings() {
     const { username } = useParams()
     const navigate = useNavigate();
-    const { User } = useContext(UserContext);
+    const { user } = useContext(UserContext);
 
     return (
 
@@ -36,22 +36,22 @@ function Settings() {
                 <Media
                     icon={<PersonRounded />}
                     header="Full name"
-                    fullname={User.fullname}
+                    value={user.name}
                 />
                 <Media
                     icon={<AlternateEmailRounded />}
                     header="Email"
-                    fullname={User.email}
+                    value={user.email}
                 />
                 <Media
                     icon={<PhoneRounded />}
                     header="Phone"
-                    fullname={User.phone}
+                    value={user.phone}
                 />
                 <Media
                     icon={<KeyRounded />}
                     header="Password"
-                    fullname="********"
+                    value="********"
                 />
                 <Modal />
             </Content>

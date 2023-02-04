@@ -6,17 +6,17 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import SettingContext from '../SettingContext';
+import SettingContext from '../Client/src/pages/account/settings/SettingContext';
+import UserContext from '@src/contexts/user'
+
 
 export default function Modal(props) {
     const { open, handleClose, handleOpen } = useContext(SettingContext)
+    const { updateUser } = useContext(UserContext)
+
 
     return (
         <div>
-            <Button variant="outlined" onClick={handleOpen}>
-                Open form dialog -
-                {open ? "modal is open" : "modal is close"}
-            </Button>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Subscribe</DialogTitle>
                 <DialogContent>

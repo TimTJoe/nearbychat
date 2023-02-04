@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styled from "styled-components"
 import { useParams, useNavigate } from 'react-router-dom'
 import { grey } from "@mui/material/colors"
 import EditRounded from "@mui/icons-material/EditRounded"
+import SettingContext from '../SettingContext'
 
 
 const MediaWrap = styled.div``
@@ -53,10 +54,8 @@ const Edit = styled(Icon)`
 function Media(props) {
     const { username } = useParams()
     const navigate = useNavigate();
-    // let _icon = props.icon;
-    // alert(_icon)
-
-    // alert(username)
+    const { handleOpen, setInputValue, setLabel } = useContext(SettingContext)
+    
     return (
         <Block>
             <Icon>
@@ -64,9 +63,13 @@ function Media(props) {
             </Icon>
             <Details>
                 <Header>{props.header}</Header>
-                <Tagline>{props.fullname}</Tagline>
+                <Tagline>{props.value}</Tagline>
             </Details>
-            <Edit>
+            <Edit onClick={(e) => {
+                handleOpen()
+                setInputValue(props.value)
+                setLabel(props.header)
+            }}>
                 <EditRounded />
             </Edit>
         </Block>
