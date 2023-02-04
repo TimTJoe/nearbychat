@@ -1,15 +1,12 @@
 import React, { useContext } from 'react';
-import Button from '@mui/material/Button';
-// import Dialog from '@mui/material/Dialog';
+import Button from "@src/components/Button"
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import SettingContext from '../SettingContext';
 import Input from './Input';
 import Dialog from "./Dialog"
 import UserContext from "@src/contexts/user"
-import { Typography } from '@mui/material';
 
 export default function Modal(props) {
     const { open,
@@ -20,7 +17,7 @@ export default function Modal(props) {
         label
     } = useContext(SettingContext)
     const { user, updateUser } = useContext(UserContext)
-    
+
     return (
         <div>
             <Dialog open={open} onClose={handleClose}>
@@ -30,7 +27,7 @@ export default function Modal(props) {
                 <DialogContent>
                     <Input
                         autoFocus
-                        label={label}
+                        // label={label}
                         type="text"
                         value={inputValue}
                         fullWidth
@@ -39,7 +36,7 @@ export default function Modal(props) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
-                    <Button onClick={handleClose}>Subscribe</Button>
+                    <Button primary onClick={handleClose}>Save</Button>
                 </DialogActions>
             </Dialog>
         </div>
