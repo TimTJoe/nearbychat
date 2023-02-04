@@ -6,7 +6,6 @@ const SettingContext = createContext(null)
 export const SettingContextProvider = ({ children }) => {
     const [open, setOpen] = useState(false);
     const [inputValue, setInputValue] = useState(null)
-    const [label, setLabel] = useState(null)
     const [value, setValue] = useState(null)
     // const { user, updateUser} = useContext(UserContext);
 
@@ -25,9 +24,7 @@ export const SettingContextProvider = ({ children }) => {
         handleClose,
         handleOpen,
         inputValue,
-        setInputValue,
-        label,
-        setLabel
+        setInputValue
     }
 
     return (

@@ -54,7 +54,11 @@ const Edit = styled(Icon)`
 function Media(props) {
     const { username } = useParams()
     const navigate = useNavigate();
+<<<<<<< Updated upstream
     const { handleOpen, setInputValue, setLabel } = useContext(SettingContext)
+=======
+    const { handleOpen, setInputValue } = useContext(SettingContext)
+>>>>>>> Stashed changes
     
     return (
         <Block>
@@ -68,7 +72,10 @@ function Media(props) {
             <Edit onClick={(e) => {
                 handleOpen()
                 setInputValue(props.value)
+<<<<<<< Updated upstream
                 setLabel(props.header)
+=======
+>>>>>>> Stashed changes
             }}>
                 <EditRounded />
             </Edit>
