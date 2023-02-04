@@ -7,25 +7,17 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import SettingContext from '../SettingContext';
 import Input from './Input';
-<<<<<<< Updated upstream
 import Dialog from "./Dialog"
 import UserContext from "@src/contexts/user"
 import { Typography } from '@mui/material';
-=======
-import UserContext from "@src/contexts/user"
->>>>>>> Stashed changes
 
 export default function Modal(props) {
     const { open,
         handleClose,
         handleOpen,
         inputValue,
-<<<<<<< Updated upstream
         setInputValue,
         label
-=======
-        setInputValue
->>>>>>> Stashed changes
     } = useContext(SettingContext)
     const { user, updateUser } = useContext(UserContext)
     
@@ -38,15 +30,8 @@ export default function Modal(props) {
                 <DialogContent>
                     <Input
                         autoFocus
-<<<<<<< Updated upstream
                         label={label}
                         type="text"
-=======
-                        margin="dense"
-                        id="name"
-                        label="Email Address"
-                        type="email"
->>>>>>> Stashed changes
                         value={inputValue}
                         fullWidth
                         variant="outlined"
