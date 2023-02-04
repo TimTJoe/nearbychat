@@ -11,8 +11,8 @@ import Navigation from '../components/Navigation';
 import Media from './components/Media';
 import Avatar from './components/Avatar';
 import UserContext from '@src/contexts/user/UserDetails'
-import Modal from "./modal"
-import { SettingContextProvider } from './SettingContext'
+import Modal from './modal'
+import SettingContext, { SettingContextProvider } from './SettingContext'
 
 const Content = styled.div`
     width: 400px;
