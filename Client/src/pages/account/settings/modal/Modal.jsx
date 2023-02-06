@@ -27,7 +27,7 @@ export default function Modal(props) {
                 <DialogContent>
                     <Input
                         autoFocus
-                        // label={label}
+                        label={label}
                         type="text"
                         value={inputValue}
                         fullWidth
