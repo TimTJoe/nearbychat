@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from "styled-components"
 import { useParams, useNavigate } from 'react-router-dom'
+import { useForm } from "react-hook-form"
 //ICONS
 import PersonRounded from "@mui/icons-material/PersonRounded"
 import PhoneRounded from "@mui/icons-material/PhoneRounded"
@@ -13,6 +14,7 @@ import Avatar from './components/Avatar';
 import UserContext from '@src/contexts/user/UserDetails'
 import Modal from './modal'
 import SettingContext, { SettingContextProvider } from './SettingContext'
+import { Box } from '@mui/material'
 
 const Content = styled.div`
     width: 400px;
@@ -28,34 +30,37 @@ function Settings() {
     const { user } = useContext(UserContext);
 
     return (
+        <Box>
 
-        <SettingContextProvider>
-            <Navigation />
-            <Content>
-                <Avatar />
-                <Media
-                    icon={<PersonRounded />}
-                    header="Full name"
-                    value={user.name}
-                />
-                <Media
-                    icon={<AlternateEmailRounded />}
-                    header="Email"
-                    value={user.email}
-                />
-                <Media
-                    icon={<PhoneRounded />}
-                    header="Phone"
-                    value={user.phone}
-                />
-                <Media
-                    icon={<KeyRounded />}
-                    header="Password"
-                    value="********"
-                />
-                <Modal />
-            </Content>
-        </SettingContextProvider>
+            <SettingContextProvider>
+                <Navigation />
+                <Content>
+                    <Avatar />
+                    <Media
+                        icon={<PersonRounded />}
+                        header="Full name"
+                        value={user.name}
+                    />
+                    <Media
+                        icon={<AlternateEmailRounded />}
+                        header="Email"
+                        value={user.email}
+                    />
+                    <Media
+                        icon={<PhoneRounded />}
+                        header="Phone"
+                        value={user.phone}
+                    />
+                    <Media
+                        icon={<KeyRounded />}
+                        header="Password"
+                        value="********"
+                    />
+                    <Modal />
+                </Content>
+            </SettingContextProvider>
+        </Box>
+
 
     )
 }
