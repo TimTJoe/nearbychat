@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from "@src/components/Button"
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -12,6 +12,23 @@ import Box from '@mui/material/Box';
 
 
 export default function Modal(props) {
+
+    const [type, setType] = useState("text")
+
+    const switchType = (type) => {
+        if (type.constructor === String) {
+            switch (type) {
+                case "name": setType("text"); break;
+                case "password": setType("password"); break;
+                case "phone": setType("tel"); break;
+                case "email": setType("email"); break;
+                default: setType("text"); break;
+            }
+        } else {
+            return alert("Function accept only string type")
+        }
+
+    }
     const { open,
         handleClose,
         handleOpen,
@@ -25,7 +42,9 @@ export default function Modal(props) {
 
     const handleForm = (e) => {
         e.preventDefault()
-        alert("Form submitted")
+        updateUser(label, inputValue);
+        switchType(label);
+        alert("Type: " + type + " label: " + label)
     }
 
     const handleChange = (e) => {
@@ -48,7 +67,7 @@ export default function Modal(props) {
                         <Input
                             autoFocus
                             label={label}
-                            type="text"
+                            type={type}
                             value={inputValue}
                             fullWidth
                             variant="outlined"

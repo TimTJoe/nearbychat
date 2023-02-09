@@ -38,23 +38,23 @@ function Settings() {
                     <Avatar />
                     <Media
                         icon={<PersonRounded />}
-                        header="Full name"
+                        header="name"
                         value={user.name}
                     />
                     <Media
                         icon={<AlternateEmailRounded />}
-                        header="Email"
+                        header="email"
                         value={user.email}
                     />
                     <Media
                         icon={<PhoneRounded />}
-                        header="Phone"
+                        header="phone"
                         value={user.phone}
                     />
                     <Media
                         icon={<KeyRounded />}
-                        header="Password"
-                        value="********"
+                        header="password"
+                        value={user.password}
                     />
                     <Modal />
                 </Content>
