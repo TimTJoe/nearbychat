@@ -7,11 +7,11 @@ const Input = styled(TextField)`
         border-radius: 17px;
 
         label {
+            text-transform: capitalize;
         }
         .MuiInputBase-root {
             input {
                 border-radius: 17px;
-                /* padding: 12px 12px; */
             }
             fieldset {
                 border-radius: 17px;

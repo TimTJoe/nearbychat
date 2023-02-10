@@ -29,6 +29,7 @@ const Header = styled.p`
     color: ${grey[500]};
     line-height: 1.2;
     margin:0;
+    text-transform: capitalize;
 `
 
 const Tagline = styled(Header)`
